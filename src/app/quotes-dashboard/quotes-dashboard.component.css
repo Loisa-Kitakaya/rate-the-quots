@@ -1,0 +1,27 @@
+.bg-custom {
+  background-color: #f0f0f0;
+}
+
+.bg-custom-body {
+  background-color: #ffffff;
+}
+
+.top-card {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.arrange {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.quote-title {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.card-arrange {
+  margin-top: 2rem;
+}
