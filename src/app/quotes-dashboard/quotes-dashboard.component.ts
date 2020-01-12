@@ -21,5 +21,14 @@ export class QuotesDashboardComponent implements OnInit {
     this.quotes[index].showQuote = !this.quotes[index].showQuote;
   }
 
+  //deleting the quotes
+  deleteQuote(index) {
+    let deleteThis = confirm("Are you sure you want to delete quote: ");
+
+    if(deleteThis) {
+      this.quotes.splice(index, 1);
+    }
+  }
+
   ngOnInit() {}
 }
