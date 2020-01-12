@@ -2,6 +2,7 @@
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  color: whitesmoke;
 }
 
 .nav-buttons {
@@ -12,4 +13,8 @@
 
 .app-content {
   margin-top: 1rem;
+}
+
+.custom-bg {
+  background-color: #259b81cc;
 }

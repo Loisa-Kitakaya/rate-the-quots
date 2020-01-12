@@ -5,31 +5,33 @@
 
 <!-- app container -->
 <div>
-  <!-- header section -->
-  <h1 class="header">{{ title }}</h1>
+  <div class="custom-bg">
+    <hr />
+    <!-- header section -->
+    <h1 class="header">{{ title }}</h1>
 
-  <!-- body section -->
-
-  <!-- navigation -->
-  <div class="nav-buttons">
-    <div>
-      <button
-        class="btn btn-outline-dark"
-        [routerLink]="['/post-quotes']"
-        routerLinkActive="router-link-active"
-      >
-        Post Quote
-      </button>
+    <!-- navigation -->
+    <div class="nav-buttons">
+      <div>
+        <button
+          class="btn btn-dark"
+          [routerLink]="['/post-quotes']"
+          routerLinkActive="router-link-active"
+        >
+          Post Quote
+        </button>
+      </div>
+      <div>
+        <button
+          class="btn btn-dark"
+          [routerLink]="['/dashboard']"
+          routerLinkActive="router-link-active"
+        >
+          Dashboard
+        </button>
+      </div>
     </div>
-    <div>
-      <button
-        class="btn btn-outline-dark"
-        [routerLink]="['/dashboard']"
-        routerLinkActive="router-link-active"
-      >
-        Dashboard
-      </button>
-    </div>
+    <hr />
   </div>
 
   <!-- content -->
