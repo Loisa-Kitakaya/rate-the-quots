@@ -16,5 +16,10 @@ export class QuotesDashboardComponent implements OnInit {
     new Quotes("sim sim", "jay-z", "he said something about music")
   ];
 
+  //showing and hiding quotes
+  toggleQuote(index) {
+    this.quotes[index].showQuote = !this.quotes[index].showQuote;
+  }
+
   ngOnInit() {}
 }
