@@ -1,1 +1,39 @@
-<p>quotes-dashboard works!</p>
+<!-- DOM element styling -->
+<link
+  rel="stylesheet"
+  href="/src/app/quotes-dashboard/quotes-dashboard.component.css"
+/>
+
+<!-- HTML DOM structure -->
+<div class="container">
+  <div *ngFor="let &quot;quote-item&quot; of quotes">
+    <div class="card bg-custom card-arrange">
+      <h3 class="quote-title">Quote title</h3>
+      <div class="arrange">
+        <button class="top-card btn btn-outline-success btn-sm">
+          like <span>0</span>
+        </button>
+        <button class="top-card btn btn-outline-primary btn-sm">
+          Toggle Quote
+        </button>
+        <button class="top-card btn btn-outline-warning btn-sm">
+          Delete Quote
+        </button>
+        <button class="top-card btn btn-outline-danger btn-sm">
+          dislike <span>0</span>
+        </button>
+      </div>
+      <div class="card-body bg-custom-body">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          porro minus odit officia sit praesentium voluptatum, labore aliquam
+          obcaecati perspiciatis eligendi ut dolorem voluptas dolorum nulla!
+          Odio vitae soluta cumque. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Repellat illo mollitia quam nemo quo quidem,
+          consectetur quae omnis hic saepe non obcaecati ducimus. Aut laborum
+          accusantium illo nobis maxime nihil?
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
