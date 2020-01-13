@@ -15,7 +15,8 @@ export class QuotesDashboardComponent implements OnInit {
       "loisa",
       "e=mc2",
       "einstein",
-      "he said some things about physics"
+      "he said some things about physics",
+      new Date()
     ),
     new Quotes(
       0,
@@ -23,7 +24,8 @@ export class QuotesDashboardComponent implements OnInit {
       "ship ship",
       "sivir",
       "riri",
-      "she said something about fashion"
+      "she said something about fashion",
+      new Date()
     ),
     new Quotes(
       0,
@@ -31,7 +33,8 @@ export class QuotesDashboardComponent implements OnInit {
       "sim 1",
       "tot",
       "jay-y",
-      "he said somethiljsdflkjsdng about music"
+      "he said somethiljsdflkjsdng about music",
+      new Date()
     ),
     new Quotes(
       0,
@@ -39,7 +42,8 @@ export class QuotesDashboardComponent implements OnInit {
       "sim 2",
       "vee",
       "jay-x",
-      "he said something ablsjdfpsdfkout music"
+      "he said something ablsjdfpsdfkout music",
+      new Date()
     )
   ];
 
@@ -71,6 +75,31 @@ export class QuotesDashboardComponent implements OnInit {
   dislike(index) {
     if (this.dislikeQuote) {
       this.quotes[index].downVote += 1;
+    }
+  }
+
+  //add new quote from form
+  addNewGoal(quote) {
+    let goalLength = this.quotes.length;
+    quote.id = goalLength + 1;
+    quote.completeDate = new Date(quote.completeDate);
+    this.quotes.push(quote);
+  }
+
+  //find quote with the largest quote
+  biggestNoInArray(arr, index) {
+    var i = 0,
+      n = arr.length;
+
+    let count = (this.quotes[index].upVote += 1);
+    let previous = this.quotes[index].upVote;
+
+    for (; i != n; ++i) {
+      let newCount = Math.max.apply(Math, count);
+
+      if (previous == newCount) {
+        return newCount;
+      }
     }
   }
 
