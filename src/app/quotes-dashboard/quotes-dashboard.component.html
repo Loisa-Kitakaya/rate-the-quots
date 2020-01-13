@@ -13,7 +13,7 @@
           class="top-card btn btn-outline-success btn-sm"
           (click)="like(i)"
         >
-          like <span> {{ quote.upVote }} </span>
+          likes: <span> {{ quote.upVote }} </span>
         </button>
         <button
           class="top-card btn btn-outline-primary btn-sm"
@@ -32,7 +32,7 @@
           class="top-card btn btn-outline-danger btn-sm"
           (click)="dislike(i)"
         >
-          dislike <span> {{ quote.downVote }} </span>
+          dislikes: <span> {{ quote.downVote }} </span>
         </button>
       </div>
       <div class="card-body bg-custom-body" *ngIf="quote.showQuote">
@@ -44,5 +44,12 @@
         <p class="center-content">Posted by: {{ quote.userName }}</p>
       </div>
     </div>
+    <hr />
+    <p class="center-content date-element">
+      ~~| Posted on: {{ quote.date | elapsedTime }} |~~
+    </p>
+      <p class="center-content date-element" appHighlight>
+        ~~| most likes |~~
+      </p>
   </div>
 </div>
