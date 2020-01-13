@@ -12,7 +12,8 @@ export class QuotesFormComponent implements OnInit {
   @Output() addQuote = new EventEmitter<Quotes>();
 
   submitForm() {
-    this.addQuote.emit(this.newQuote);
+    //storing the user data to the local storage
+    localStorage.setItem("quotesFromTheUser", JSON.stringify(this.newQuote));
   }
 
   ngOnInit() {}
