@@ -16,7 +16,7 @@ export class QuotesDashboardComponent implements OnInit {
       "e=mc2",
       "einstein",
       "he said some things about physics",
-      new Date()
+      new Date(2, 25, 1992)
     ),
     new Quotes(
       0,
@@ -25,7 +25,7 @@ export class QuotesDashboardComponent implements OnInit {
       "sivir",
       "riri",
       "she said something about fashion",
-      new Date()
+      new Date(3, 6, 2003)
     ),
     new Quotes(
       0,
@@ -34,7 +34,7 @@ export class QuotesDashboardComponent implements OnInit {
       "tot",
       "jay-y",
       "he said somethiljsdflkjsdng about music",
-      new Date()
+      new Date(4, 10, 2010)
     ),
     new Quotes(
       0,
