@@ -10,7 +10,7 @@ In this project, a user is able to view quotes already posted by other users; li
 
 ## Deployment Link
 
-(will come here)
+<https://loisa-kitakaya.github.io/rate-the-quots>
 
 ## Operating
 
