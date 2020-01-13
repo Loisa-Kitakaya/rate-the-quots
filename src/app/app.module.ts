@@ -7,6 +7,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { QuotesDashboardComponent } from "./quotes-dashboard/quotes-dashboard.component";
 import { QuotesFormComponent } from "./quotes-form/quotes-form.component";
+import { HighlightDirective } from './highlight.directive';
+import { ElapsedTimePipe } from './elapsed-time.pipe';
 
 //registering routes
 const appRoutes: Routes = [
@@ -16,14 +18,15 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, QuotesDashboardComponent, QuotesFormComponent],
+  declarations: [AppComponent, QuotesDashboardComponent, QuotesFormComponent, HighlightDirective, ElapsedTimePipe],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
