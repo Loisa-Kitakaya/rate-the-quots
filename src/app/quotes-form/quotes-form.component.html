@@ -8,7 +8,7 @@
       <!-- username -->
       <div class="form-group">
         <input
-          [(ngModel)]="newQuotes.userName"
+          [(ngModel)]="newQuote.userName"
           #username="ngModel"
           required
           type="text"
@@ -21,7 +21,7 @@
       <!-- quote title -->
       <div class="form-group">
         <input
-          [(ngModel)]="newQuotes.quoteTitle"
+          [(ngModel)]="newQuote.quoteTitle"
           #quotename="ngModel"
           type="text"
           name="quotename"
@@ -34,7 +34,7 @@
       <!-- quote author -->
       <div class="form-group">
         <input
-          [(ngModel)]="newQuotes.quoteAuthor"
+          [(ngModel)]="newQuote.quoteAuthor"
           #quoteauthor="ngModel"
           type="text"
           name="quoteauthor"
@@ -47,7 +47,7 @@
       <!-- actual quote -->
       <div class="form-group">
         <textarea
-          [(ngModel)]="newQuotes.quote"
+          [(ngModel)]="newQuote.quote"
           #quote="ngModel"
           name="quote"
           id="quote"
@@ -61,7 +61,7 @@
       <!-- date -->
       <div class="form-group">
         <input
-          [(ngModel)]="newQuotes.date"
+          [(ngModel)]="newQuote.date"
           #date="ngModel"
           required
           type="date"
