@@ -1,1 +1,81 @@
-<p>quotes-form works!</p>
+<!-- DOM element styling -->
+<link rel="stylesheet" href="/src/app/quotes-form/quotes-form.component.css" />
+
+<!-- HTM DOM structure -->
+<div class="container">
+  <div class="jumbotron container-arrange">
+    <form #quotesForm="ngForm" (ngSubmit)="submitForm()">
+      <!-- username -->
+      <div class="form-group">
+        <input
+          [(ngModel)]="newQuotes.userName"
+          #username="ngModel"
+          required
+          type="text"
+          name="username"
+          id="username"
+          class="form-control"
+          placeholder="Your name..."
+        />
+      </div>
+      <!-- quote title -->
+      <div class="form-group">
+        <input
+          [(ngModel)]="newQuotes.quoteTitle"
+          #quotename="ngModel"
+          type="text"
+          name="quotename"
+          id="quotename"
+          class="form-control"
+          required
+          placeholder="Quote Title..."
+        />
+      </div>
+      <!-- quote author -->
+      <div class="form-group">
+        <input
+          [(ngModel)]="newQuotes.quoteAuthor"
+          #quoteauthor="ngModel"
+          type="text"
+          name="quoteauthor"
+          id="quoteauthor"
+          class="form-control"
+          required
+          placeholder="Quote Author..."
+        />
+      </div>
+      <!-- actual quote -->
+      <div class="form-group">
+        <textarea
+          [(ngModel)]="newQuotes.quote"
+          #quote="ngModel"
+          name="quote"
+          id="quote"
+          class="form-control"
+          cols="30"
+          rows="10"
+          required
+          placeholder="Quote"
+        ></textarea>
+      </div>
+      <!-- date -->
+      <div class="form-group">
+        <input
+          [(ngModel)]="newQuotes.date"
+          #date="ngModel"
+          required
+          type="date"
+          name="date"
+          id="date"
+          class="form-control"
+          placeholder="Date..."
+        />
+      </div>
+      <hr />
+      <!-- post button -->
+      <div class="form-group">
+        <button type="submit" class="form-control btn btn-success">Post</button>
+      </div>
+    </form>
+  </div>
+</div>
