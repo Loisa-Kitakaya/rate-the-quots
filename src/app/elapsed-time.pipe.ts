@@ -1,12 +1,20 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
-  name: 'elapsedTime'
+  name: "elapsedTime"
 })
 export class ElapsedTimePipe implements PipeTransform {
+  //custom pipe
+  transform(value: any): any {
+    let now: any = Date.now();
+    let elapsedSeconds: number = Math.abs(value - now) / 1000;
 
-  transform(value: any, ...args: any[]): any {
-    return null;
+    let elapsedDays: number = Math.floor(elapsedSeconds / 86400);
+
+    if (elapsedDays) {
+      return `${elapsedDays} days ago`;
+    } else {
+      return "Today";
+    }
   }
-
 }
