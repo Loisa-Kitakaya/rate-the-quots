@@ -78,13 +78,6 @@ export class QuotesDashboardComponent implements OnInit {
     }
   }
 
-  //add new quote from form
-  addNewGoal(quote) {
-    let goalLength = this.quotes.length;
-    quote.id = goalLength + 1;
-    this.quotes.push(quote);
-  }
-
   //find quote with the largest quote
   biggestNoInArray(arr, index) {
     var i = 0,
@@ -102,5 +95,11 @@ export class QuotesDashboardComponent implements OnInit {
     }
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    //read values from local storage and add to list
+    let retrievedData = localStorage.getItem("quotesFromTheUser");
+    let addQuote = JSON.parse(retrievedData);
+
+    this.quotes.push(addQuote);
+  }
 }
