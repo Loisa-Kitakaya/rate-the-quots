@@ -24,7 +24,7 @@
         <h3 class="quote-title">{{ quote.quoteTitle }}</h3>
         <button
           class="top-card btn btn-outline-warning btn-sm"
-          (click)="deleteQuote()"
+          (click)="deleteQuote(i)"
         >
           Delete Quote
         </button>
@@ -48,8 +48,8 @@
     <p class="center-content date-element">
       ~~| Posted: {{ quote.date | elapsedTime }} |~~
     </p>
-      <p class="center-content date-element" appHighlight>
-        ~~| most likes |~~
-      </p>
+    <p class="center-content date-element" appHighlight>
+      ~~| most likes |~~
+    </p>
   </div>
 </div>
