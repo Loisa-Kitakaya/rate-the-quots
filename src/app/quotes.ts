@@ -8,7 +8,8 @@ export class Quotes {
     public userName: string,
     public quoteTitle: string,
     public quoteAuthor: string,
-    public quote: string
+    public quote: string,
+    public date: Date
   ) {
     this.showQuote = false;
   }
